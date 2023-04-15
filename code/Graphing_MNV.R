@@ -3,7 +3,7 @@
 #GRAPHING MNV COMPARISON IN BOTH ANAYLSES   
 #
 # Created by KW October 2022 
-# modified by K.Weisgerber on 4/13/23
+# modified by K.Weisgerber on 4/15/23
 #
 ##############################################
 
@@ -24,13 +24,13 @@ CCfive<-five %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Modal Nuclei Volume'~ ~ (fL))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average modal nuclei volume'~ ~ (fL))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 CCfive
 
 #making the axis labels full population names 
-cc_five<- CCfive + scale_x_discrete("Sample Population", labels = c("GRH_BR" = "Birthday Rapids", "GRH_LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMMay" = "University" ))
+cc_five<- CCfive + scale_x_discrete("Sample population", labels = c("GRH_BR" = "Birthday Rapids", "GRH_LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMMay" = "University" ))
 cc_five
 
 #adding significance labels 
@@ -65,13 +65,13 @@ UMCC<-UMonly %>%
                color = "grey")+
   geom_point(shape = 16) +
   theme_classic() +
-  ylab(bquote('Average Modal Nuclei Volume'~ ~ (fL))) +
-  xlab('Days Post Hatch')+ 
+  ylab(bquote('Average modal nuclei volume'~ ~ (fL))) +
+  xlab('Days post hatch')+ 
   theme(text = element_text(size = 15))
 UMCC
 
 #relabelling x axis 
-UM_CC<-UMCC + scale_x_discrete("Days Post Hatch", labels = c("UMNov_" = "175", "UMDec" = "200", "UMJan" = "225", "UMJan_" = "240", "UMFeb" = "268", "UMApril" = "325", "UMMay" = "344"))
+UM_CC<-UMCC + scale_x_discrete("Days post hatch", labels = c("UMNov_" = "175", "UMDec" = "200", "UMJan" = "225", "UMJan_" = "240", "UMFeb" = "268", "UMApril" = "325", "UMMay" = "344"))
 UM_CC
 
 #adding significance values 
@@ -115,4 +115,4 @@ CCpatch<-(gg_five) /
   (gg_um) +
   plot_annotation(tag_levels = 'A')
 CCpatch
-ggsave(filename = "MNV_comb.tiff", plot = CCpatch, dpi = 600, height = 16, width = 12)
+ggsave(filename = "MNV_comb_final.tiff", plot = CCpatch, dpi = 600, height = 12, width = 14)

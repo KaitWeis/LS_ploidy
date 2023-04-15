@@ -3,7 +3,7 @@
 #BLOOD SMEAR GRAPHING 
 #
 # Created by KW October 2022 
-# modified by K.Weisgerber on 4/13/23
+# modified by K.Weisgerber on 4/15/23
 #
 ############################################
 #load libraries
@@ -48,13 +48,13 @@ cellv<-Cells1 %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Cell Volume'~ ~ (um^3))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average cell volume'~ ~ (um^3))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 cellv
 
 #making the axis labels full population names 
-CV<- cellv + scale_x_discrete("Sample Population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
+CV<- cellv + scale_x_discrete("Sample population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
 CV
 
 #add the statistical significance 
@@ -102,13 +102,13 @@ cellsa<-Cells1 %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Cell Surface Area'~ ~ (um^2))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average cell surface area'~ ~ (um^2))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 cellsa
 
 #making the axis labels full population names 
-CSA<- cellsa + scale_x_discrete("Sample Population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
+CSA<- cellsa + scale_x_discrete("Sample population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
 CSA
 
 #add the statistical significance 
@@ -156,13 +156,13 @@ cellsav<-Cells1 %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Cell SA:V Ratio'~ ~ (um))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average cell SA:V ratio'~ ~ (um))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 cellsav
 
 #making the axis labels full population names 
-CSAV<- cellsav + scale_x_discrete("Sample Population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
+CSAV<- cellsav + scale_x_discrete("Sample population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
 CSAV
 
 #add the statistical significance 
@@ -211,13 +211,13 @@ nucleiv<-Nuc %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Nuclei Volume'~ ~ (um^3))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average nuclei volume'~ ~ (um^3))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 nucleiv
 
 #making the axis labels full population names 
-NV<- nucleiv + scale_x_discrete("Sample Population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
+NV<- nucleiv + scale_x_discrete("Sample population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
 NV
 
 #add the statistical significance 
@@ -265,13 +265,13 @@ nucleisa<-Nuc %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Nuclei Surface Area'~ ~ (um^2))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average nuclei surface area'~ ~ (um^2))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 nucleisa
 
 #making the axis labels full population names 
-NSA<- nucleisa + scale_x_discrete("Sample Population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
+NSA<- nucleisa + scale_x_discrete("Sample population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
 NSA
 
 #add the statistical significance 
@@ -319,13 +319,13 @@ Nucsav<-Nuc %>%
                color = "grey")+
   geom_point(shape = 16) + 
   theme_classic() +
-  ylab(bquote('Average Nuclei SA:V Ratio'~ ~ (um))) +
-  xlab('Sample Population')+ 
+  ylab(bquote('Average nuclei SA:V ratio'~ ~ (um))) +
+  xlab('Sample population')+ 
   theme(text = element_text(size = 15))
 Nucsav
 
 #making the axis labels full population names 
-NSAV<- Nucsav + scale_x_discrete("Sample Population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
+NSAV<- Nucsav + scale_x_discrete("Sample population", labels = c("BR" = "Birthday Rapids", "LR" = "Landing River", "NR" = "Nelson River", "PDB" = "Pointe du Bois", "UMFeb" = "UM 268", "UMMay" = "UM 344" ))
 NSAV
 
 #add the statistical significance 
@@ -367,4 +367,4 @@ AllSmear<-(CV_stat | NV_stat) /
   (CSAV_stat| NSAV_stat)+
   plot_annotation(tag_levels = 'A')
 AllSmear
-ggsave(filename = "Combsmears2.tiff", plot = AllSmear, dpi = 600, height = 16, width = 18)
+ggsave(filename = "Comb_Smears_final.tiff", plot = AllSmear, dpi = 600, height = 16, width = 18)
